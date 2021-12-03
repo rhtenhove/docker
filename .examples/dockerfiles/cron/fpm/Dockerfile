@@ -2,8 +2,7 @@ FROM nextcloud:fpm
 
 RUN apt-get update && apt-get install -y \
     supervisor \
-  && rm -rf /var/lib/apt/lists/* \
-  && mkdir /var/log/supervisord /var/run/supervisord
+  && rm -rf /var/lib/apt/lists/*
 
 COPY supervisord.conf /
 
